@@ -6,12 +6,7 @@ import { WalletProvider } from "@solana/wallet-adapter-react";
 import {
   LedgerWalletAdapter,
   PhantomWalletAdapter,
-  SlopeWalletAdapter,
   SolflareWalletAdapter,
-  SolletExtensionWalletAdapter,
-  SolletWalletAdapter,
-  GlowWalletAdapter,
-  BackpackWalletAdapter,
 } from "@solana/wallet-adapter-wallets";
 
 import { useMemo } from "react";
@@ -23,13 +18,8 @@ export default function ClientWalletProvider(
   const wallets = useMemo(
     () => [
       new PhantomWalletAdapter(),
-      new SlopeWalletAdapter(),
       new SolflareWalletAdapter(),
       new LedgerWalletAdapter(),
-      new SolletWalletAdapter(),
-      new SolletExtensionWalletAdapter(),
-      new GlowWalletAdapter(),
-      new BackpackWalletAdapter(),
     ],
     []
   );
